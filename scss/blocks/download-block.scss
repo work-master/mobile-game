@@ -1,0 +1,99 @@
+@import '../blocks/variables-mixins';
+
+.download-block{
+	padding-top: 70px;
+	a{
+		&:hover{
+			animation: zoomIn 0.4s;
+		}
+	}
+	&__header{
+		display: block;
+		color: #4f2c1a;
+		text-shadow: 0px -3px 0px rgba(246, 222, 96, 0.78); 
+		@include fontSize(31px);
+		margin-top: 16px;
+		margin-bottom: 32px;
+	}
+	&__gp{
+		display: inline-block;
+		vertical-align: middle;
+		width: 260px;
+		height: 90px;
+		margin-right: 13px;
+		background: transparent url('../images/gp-bg.png') left top no-repeat;
+	}
+	&__app{
+		display: inline-block;
+		vertical-align: middle;
+		width: 260px;
+		height: 90px;
+		background: transparent url('../images/app-bg.png') left top no-repeat;
+	}
+}
+.download-bg{
+	width: 660px;
+	height: 209px;
+	display: inline-block;
+	vertical-align: middle;
+	background: transparent url('../images/download-bg.png') left top no-repeat;
+}
+
+/***** Animation Keyframes *****/
+
+@keyframes zoomIn{
+	0%{
+		transform: scale(1);
+	}
+	50%{
+		transform: scale(1.02);
+	}
+	100%{
+		transform: scale(1);
+	}
+}
+
+/***** Media Queries *****/
+
+@media (max-width: 899px) {
+	.download-bg{
+		width: 520px;
+		height: 160px;
+		background-size: 520px 100%;
+	}
+	.download-block{
+		padding-top: 50px;
+		&__header{
+			margin-top: 11px;
+			margin-bottom: 32px;
+			@include fontSize(25px);
+		}
+		&__gp, &__app{
+			background-size: contain;
+			width: 190px;
+			height: 64px;
+		}
+	}
+}
+
+@media (max-width: 539px) {
+	.download-bg{
+		width: 95%;
+		max-width: 390px;
+		background-size: 100% 130px;
+		height: 130px;
+	}
+	.download-block{
+		&__header{
+			@include fontSize(17px);
+		}
+		&__gp{
+			margin-right: 4px;
+		}
+		&__gp, &__app{
+			width: 130px;
+			height: 44px;
+			background-size: contain;
+		}
+	}
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>Игра онлайн</title>
+	<link rel="stylesheet" href="css/main.css">
+	<!--<link rel="stylesheet" href="css/main.min.css">-->
+</head>
+<body class="body">
+
+	<!-- Header -->
+	<header class="header header_profile clearfix">
+		<div class="container">
+			<div class="exit-block">
+				<button class="exit-button">
+					<i class="icon-exit"></i>
+					<span class="exit-button__text">Выйти</span>
+				</button>
+			</div>
+			<div class="logo">
+				<a href="#" class="logo__link"></a>
+			</div>
+			<div class="profile-block">
+				<div class="profile-block__bg">
+					<span class="profile-block__name" id="profile-name">Samuel L J</span>
+					<div class="profile-block__photo" id="profile-photo">
+						<img src="images/profile-photo.png" alt="" class="profile-photo">
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- End of Header -->
+
+	<!-- Balance block -->
+	<div class="balance-block">
+		<div class="balance balance_checkout">
+			<span class="balance-block__header">Вывести</span>
+			<form action="" class="checkout-form">
+				<div class="input-wrapper">
+					<input type="text" class="checkout-form__input" placeholder="Сумма">
+					<span class="checkout-form__letter">₽</span>
+				</div>
+				<span class="checkout-form__header">
+					К зачислению
+					<span class="checkout-value" id="checkout-value">950.00</span>
+					<span class="checkout-value"> ₽</span>
+				</span>
+				<span class="checkout-form__text">При выводе средств взымается <br/> комиссия в размере 5% от суммы</span>
+				<div class="input-wrapper">
+					<input type="text" class="checkout-form__input checkout-form__input_small-font" placeholder="Номер кошелька">
+					<img src="images/yandex.png" alt="" class="pay-img">
+				</div>
+				<button class="balance-block__button balance-block__button_plus">
+					<span class="balance-block__button-text">Вывести</span>
+				</button>
+			</form>
+		</div>
+	</div>
+	<!-- End of Balance Block -->
+
+	<!-- Attention Block -->
+	<div class="attention attention_large-pad">
+		<button class="balance-block__button balance-block__button_minus">
+			<span class="balance-block__button-text">Другой способ</span>
+		</button>
+	</div>
+	<!-- End of Attention Block -->
+
+</body>
+</html>

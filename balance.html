@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>Игра онлайн</title>
+	<link rel="stylesheet" href="css/main.css">
+	<!--<link rel="stylesheet" href="css/main.min.css">-->
+</head>
+<body class="body">
+
+	<!-- Header -->
+	<header class="header header_profile clearfix">
+		<div class="container">
+			<div class="exit-block">
+				<button class="exit-button">
+					<i class="icon-exit"></i>
+					<span class="exit-button__text">Выйти</span>
+				</button>
+			</div>
+			<div class="logo">
+				<a href="#" class="logo__link"></a>
+			</div>
+			<div class="profile-block">
+				<div class="profile-block__bg">
+					<span class="profile-block__name" id="profile-name">Samuel L J</span>
+					<div class="profile-block__photo" id="profile-photo">
+						<img src="images/profile-photo.png" alt="" class="profile-photo">
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- End of Header -->
+
+	<!-- Balance block -->
+	<div class="balance-block">
+		<div class="balance">
+			<span class="balance-block__header">Баланс</span>
+			<span class="balance-block__value" id="balance-value">345.25 ₽</span>
+			<span class="balance-block__value-text">На счету</span>
+			<button class="balance-block__button balance-block__button_plus">
+				<i class="icon-plus"></i>
+				<span class="balance-block__button-text">Пополнить счет</span>
+			</button>
+			<button class="balance-block__button balance-block__button_minus">
+				<i class="icon-minus"></i>
+				<span class="balance-block__button-text">Вывести деньги</span>
+			</button>
+		</div>
+	</div>
+	<!-- End of Balance Block -->
+
+	<!-- Attention Block -->
+	<div class="attention">
+		<span class="attention__important-text">Важно</span>
+		<span class="attention__about-text">При выводе средств взымается <br/> комиссия в размере 5% от суммы.</span>
+	</div>
+	<!-- End of Attention Block -->
+
+	<!-- Popup Block (данный блок вставлять перед закрывающим тегом "</body>") -->
+	<div class="popup-bg popup-bg_active" id="popup-bg"></div>
+	<div class="balance-block balance-block_popup balance-block_popup-active">
+		<div class="balance balance_popup">
+			<span class="balance-block__header">Успех</span>
+			<form action="" class="checkout-form">
+				<div class="checkout-form__money-bg"></div>
+				<span class="checkout-form__header">
+					+ 
+					<span class="checkout-value checkout-value_large-font" id="checkout-value">1000.00</span>
+					<span class="checkout-value checkout-value_large-font"> ₽</span>
+				</span>
+				<span class="checkout-form__text checkout-form__text_small-margin">Ваш баланс успешно пополнен! <br/> Удачи в игре!</span>
+				<button class="balance-block__button balance-block__button_plus">
+					<span class="balance-block__button-text balance-block__button-text_small-font">Ясно, спасибо</span>
+				</button>
+			</form>
+		</div>
+	</div>
+	<!-- End of Popup Block -->
+
+</body>
+</html>

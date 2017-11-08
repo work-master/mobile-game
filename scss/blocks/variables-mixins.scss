@@ -1,0 +1,17 @@
+
+// Mixins and functions
+
+@function calculateRem($size) {
+	$remSize: $size / 14px;
+	@return #{$remSize}rem;
+}
+@mixin fontSize($size) {
+	font-size: calculateRem($size);
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder { color: #e4d2b1; opacity: 1; }
+  &:-moz-placeholder           { color: #e4d2b1; opacity: 1; }
+  &::-moz-placeholder          { color: #e4d2b1; opacity: 1; }
+  &:-ms-input-placeholder      { color: #e4d2b1; opacity: 1; }  
+}

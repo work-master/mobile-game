@@ -1,0 +1,53 @@
+@import '../blocks/variables-mixins';
+
+.attention{
+	padding-top: 28px;
+	&__important-text{
+		display: block;
+		@include fontSize(31px);
+		color: #f5cf8b;
+	}
+	&__about-text{
+		display: block;
+		margin-top: 15px;
+		margin-bottom: 50px;
+		color: #c36c2c;
+		@include fontSize(23px);
+	}
+}
+.attention.attention_large-pad{
+	padding: 85px 0;
+}
+
+/***** Media Queries *****/
+
+@media (max-width: 899px) {
+	.attention{
+		&__about-text{
+			margin-bottom: 15px;
+		}
+	}
+}
+
+@media (max-width: 539px) {
+	.attention{
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		z-index: 4;
+		width: 89%;
+		max-width: 385px;
+		padding-top: 45px;
+		background: #140609;
+		box-shadow: 0 -6px 2px 3px #140609;
+		&__about-text{
+			margin: 0 0 30px 0;
+			@include fontSize(22px);
+		}
+	}
+	.attention.attention_large-pad{
+		background: transparent;
+		box-shadow: none;
+		padding: 60px 0 30px 0;
+	}
+}
